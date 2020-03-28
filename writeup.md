@@ -14,13 +14,16 @@ max acceleration = 10 m/s^2
 max jerk = 10 m/s^3
 ```
 
+### **Video Link**
+Link to the achieved result : [Path planning](<https://youtu.be/zlmjbI2riw0>)
+
 The project can be divided into following sub-goals
 
 * Trajectory generation
 * Speed control
 * Change lane
 
-### Trajectory generation
+### **Trajectory generation**
 
 As discussed in the course, a path of 50 points which include the previous and future points from the map. Spline tool is used to generate a smooth transition between these points.
 
@@ -38,7 +41,7 @@ tk::spline s;
 s.set_points(ptsx, ptsy);
 ```
 
-### Speed Control
+### **Speed Control**
 
 Ego speed should not exceed 50 mph at any point of time and the speed should be decreased when the other car is present in front of the ego and the speed can be increased when the lane is free.
 
@@ -79,7 +82,7 @@ As the car in front of the ego is moving slowly and as the ego approaches the ca
 ![alt text][gif_deccelerate]
 
 
-### Lane
+### **Lane**
 
 In every iteration, the data from the sensor fusion is used to determine the next lane of the ego
 
@@ -92,7 +95,7 @@ If lane change is possible, the d parameter of the ego is updated to the respect
 
 ![alt text][gif_lane_change]
 
-### Improvements
+### **Improvements**
 
 * Handling sudden lane changes by other cars are not considered
 * Handling sudden change in velocity by other cars
