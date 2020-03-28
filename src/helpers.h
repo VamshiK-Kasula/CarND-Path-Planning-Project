@@ -9,6 +9,17 @@
 using std::string;
 using std::vector;
 
+#define SPEED_LIMIT 49.50
+#define SAFE_DISTANCE 30.0
+
+struct Lanes {
+  bool center_lane;
+  bool left_lane;
+  bool right_lane;
+  bool too_close;
+};
+ 
+ 
 // Checks if the SocketIO event has JSON data.
 // If there is data the JSON object in string format will be returned,
 //   else the empty string "" will be returned.
